@@ -3,15 +3,22 @@
 
 
 // Part 1: Declare (5) Variables With Type
-
+let spacecraftName: string="Determination"
+let speedMph: number=17500
+let kilometersToMars: number=225000000
+let kilometersToMoon: number=384400
+let milesPerKilometer: number=0.621
 
 
 // Part 2: Print Days to Mars
+let milesToMars= function(a: number, b: number): number {return kilometersToMars*milesPerKilometer}
+let hoursToMars= function(a: number, b: number): number {return milesToMars/speedMph}
+let daysToMars= function(a: number, b: number): number {return hoursToMars/24}
 
 
 
 // Code an output statement here (use a template literal):
-
+console.log(`${spacecraftName} would take ${daysToMars} days to get to Mars.`)
 
 
 // Part 3: Create a Function ("getDaysToLocation")
